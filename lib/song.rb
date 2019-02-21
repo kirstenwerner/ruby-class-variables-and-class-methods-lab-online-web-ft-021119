@@ -33,7 +33,7 @@ class Song
   def self.genre_count
     @@genres.map do |genre_name|
       if @@genre_count[genre_name] == nil 
-      @@genre_count[genre_name] = 1
+        @@genre_count[genre_name] = 1
       else @@genre_count[genre_name] += 1 
       end 
     end
@@ -41,7 +41,12 @@ class Song
   end 
   
   def self.artist_count
-    
+    @@artists.map do |artist_name|
+      if @@artist_count[artist_name] == nil 
+        @@artist_count[artist_name] = 1 
+      else @@artist_count[artist_name] += 1 
+      end
+    end 
   end
     
 end 
